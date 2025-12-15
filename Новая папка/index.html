@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Муратов Владислав</title>
+
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background: #111827;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+        nav button {
+            background: #2563eb;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        nav button:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+        section {
+            display: none;
+            padding: 30px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            margin-top: 0;
+            color: #1f2937;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .note {
+            font-size: 14px;
+            color: #666;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f2937;
+            color: #fff;
+            margin-top: 40px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Портфолио студента</h1>
+    <p><strong>Муратов Владислав</strong></p>
+    <p>Амурский педагогический колледж</p>
+    <p>4 курс, группа 344 — специальность «Администратор баз данных»</p>
+</header>
+
+<nav>
+    <button onclick="showSection('about')"><i class="fa-solid fa-user"></i> Обо мне</button>
+    <button onclick="showSection('skills')"><i class="fa-solid fa-code"></i> Навыки</button>
+    <button onclick="showSection('certs')"><i class="fa-solid fa-award"></i> Сертификаты</button>
+    <button onclick="showSection('pcbuilds')"><i class="fa-solid fa-desktop"></i> Сборки ПК</button>
+    <button onclick="showSection('contacts')"><i class="fa-solid fa-envelope"></i> Контакты</button>
+</nav>
+
+<section id="about" class="active">
+    <h2>Обо мне</h2>
+    <div class="card">
+        <p>Я студент 4 курса Амурского педагогического колледжа, обучаюсь по специальности «Администратор баз данных». Интересуюсь IT, администрированием баз данных и сборкой компьютерной техники.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Профессиональные навыки</h2>
+    <div class="card">
+        <ul>
+            <li>Администрирование баз данных</li>
+            <li>Работа с SQL</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>HTML</li>
+            <li>Сборка и обслуживание ПК</li>
+            <li>Установка и настройка Windows</li>
+        </ul>
+    </div>
+</section>
+
+<section id="certs">
+    <h2>Сертификаты и грамоты</h2>
+    <div class="card">
+        <div class="gallery">
+            <img src="cert1.png" alt="Сертификат 1">
+            <img src="cert2.png" alt="Сертификат 2">
+            <img src="cert3.jpg" alt="Сертификат 3">
+            <img src="cert4.jpg" alt="Сертификат 4">
+        </div>
+    </div>
+</section>
+
+<section id="pcbuilds">
+    <h2>Выполненные сборки ПК</h2>
+    <div class="card">
+        <div class="gallery">
+            <img src="pc1.jpg" alt="Сборка ПК 1">
+            <img src="pc2.jpg" alt="Сборка ПК 2">
+        </div>
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+        <p><i class="fa-solid fa-phone"></i> Телефон: +7 (963)807-38-69</p>
+        <p><i class="fa-solid fa-envelope"></i> Email: vladmuratov961@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Муратов Владислав</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("PASTE_PUBLIC_KEY_HERE");
+    })();
+
+    function showSection(id) {
+        document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('PASTE_SERVICE_ID', 'PASTE_TEMPLATE_ID', this)
+            .then(() => {
+                document.getElementById('status').innerText = 'Сообщение отправлено на почту ✅';
+                this.reset();
+            }, () => {
+                document.getElementById('status').innerText = 'Ошибка отправки ❌';
+            });
+    });
+</script>
+
+</body>
+</html>
